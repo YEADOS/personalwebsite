@@ -1,5 +1,5 @@
 import os
-from flask import Flask 
+from flask import Flask, render_template
 
 def create_app():
     # instance_relative_config=True is used to have the configuration files outside the main application directory. This is important for things like the database and secret keys that should not be in main directory
@@ -26,6 +26,18 @@ def create_app():
     @app.route('/hello')
     def hello():
         return 'Hello, World!'
+    
+    @app.route('/home')
+    def home():
+        return render_template('base.html')
+    
+    @app.route('/about')
+    def about():
+        return render_template('base.html')
+    
+    @app.route('/contact')
+    def contact():
+        return render_template('base.html')
     
 
     return app

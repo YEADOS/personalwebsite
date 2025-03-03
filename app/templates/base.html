@@ -5,13 +5,20 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div clas="nav">
-        <ul>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-            <li><a href="{{ url_for('contact') }}">Contact</a></li>
-        </ul>
-    </div>
+    <header>
+        <nav class="navbar">
+            
+            <ul class="nav-links">
+                <li class="nav-logo"><a a class="nav-link" href="#">Nicholas Yeadon</a></li>
+                <li><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
+                <li><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+                <li><a class="nav-link" href="{{ url_for('contact') }}">Contact</a></li>
+                <li class="nav-line"></li>
+                <li><a class="nav-btn nav-link" href="#">Login</a></li>
+            </ul>
+            
+        </nav>
+    </header>
 </body>
 </html>
 
