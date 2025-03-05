@@ -33,15 +33,11 @@ body {
 
 /* } */
 
-header .navbar {
-    justify-content: space-between;
-
-}
 
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -50,7 +46,19 @@ header .navbar {
     /* background-color: var(--secondary-color); */
 }
 
+.nav-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
 
+.nav-logo:hover {
+    
+    text-decoration: line-through;
+    text-decoration-color: var(--primary-color);
+    /* padding: 1.5em; */
+}
 
 .nav-links {
     display: flex;
@@ -60,9 +68,6 @@ header .navbar {
     /* border: 1px solid red; */
 }
 
-.nav-logo {
-    align-self: flex-start;
-}
 
 .nav-link {
     text-decoration: none;
