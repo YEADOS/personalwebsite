@@ -23,30 +23,45 @@ body {
     color: white;
 }
 
-header {
-    display: flex;
-    /* margin: auto; */
-    justify-content: flex-end;
-    align-items: center;
+/* header { */
+    /* display: flex;
+    margin: auto; */
+    /* justify-content: flex-end; */
+    /* align-items: center;
     padding-left: 2rem;
-    padding-right: 2rem;
+    padding-right: 2rem; */
+
+/* } */
+
+header .navbar {
+    justify-content: space-between;
 
 }
 
 .navbar {
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
     padding-top: 2rem;
     padding-bottom: 2rem;
-    align-items: center;
+    width: 80%;
+    margin: auto;
     /* background-color: var(--secondary-color); */
 }
+
 
 
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2em;
+    
     /* border: 1px solid red; */
+}
+
+.nav-logo {
+    align-self: flex-start;
 }
 
 .nav-link {
