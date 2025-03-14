@@ -23,6 +23,19 @@ body {
     color: white;
 }
 
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 3rem; */
+}
+
+.section {
+    background-color: var(--secondary-color);
+    padding: 10em;
+    margin: 5em;
+}
+
 /* header { */
     /* display: flex;
     margin: auto; */
@@ -35,6 +48,9 @@ body {
 
 
 .navbar {
+
+    /* border: 1px solid red; */
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -96,4 +112,50 @@ body {
 
 .nav-btn:hover {
     background-color: var(--thirdary-color);
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 10%;
+    background-color: #22272F;
+    padding: 2em;
+    
+    gap: 0.5rem;
+    border-radius: 2em;
+    text-align: left;
+    
+}
+
+/* .form-login input, .form-login label, .form-login button {
+    display: block;
+
+}  */
+
+.form-login input {
+    padding: 0.5em;
+    width: 100%;
+    max-width: 90%;
+}
+
+.form-link {
+    text-decoration: underline;
+    color: white;
+    /* font-weight: 600; */
+    transition: color 0.3s;
+}
+
+.form-link:hover {
+    color: var(--thirdary-color);
+}
+
+.form-btn {
+    width: 100%;
+}
+
+.content {
+    margin-top: 2em;
+    /* border: 1px solid red; */
 }
