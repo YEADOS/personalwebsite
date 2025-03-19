@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Website Streak Tracker",
+    "version": "1.4",
+    "description": "Count how many days in a row leetcode is visited",
+    "permissions": ["tabs"],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  

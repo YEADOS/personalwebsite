@@ -40,7 +40,7 @@ def login():
         if error is None:
             session.clear()
             session['user_id'] = user['id']
-            return redirect(url_for('home'))
+            return redirect(url_for('index'))
         
         flash(error)
 
@@ -83,3 +83,8 @@ def register():
         flash(error)
 
     return render_template('auth/register.html')
+
+@bp.route('/logout', methods=('GET', 'POST'))
+def logout(): 
+    session.clear();
+    return redirect(url_for('index'))

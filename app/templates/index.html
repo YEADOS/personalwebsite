@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="section">
+        <h2>LeetCode Tracker</h2>
+        <p>Simple Leetcode tracker that keeps count of how many days in a row I have accessed the website</p>
+        <a class="btn" href="{{ url_for('tracker.view') }}">Check Streak</a>
+    </div>
+</div>
+
+
+<!-- <div class="container">
+    <div class="section">
+        
+    </div>
+    <div class="section">
+        
+    </div>
+</div> -->
+{% endblock %}

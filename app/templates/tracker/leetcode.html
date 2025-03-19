@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="section">
+        <h1>Streak : {{ streak['current_streak'] }}</h1>
+        <h2>Longest Streak: {{ streak['longest_streak'] }}</h2>
+        <h3>Started: {{ streak['streak_start_date'] }}</h2>
+        <h3>Current: {{ streak['streak_last_date'] }}</h2>
+    </div>
+    {% if g.user['admin'] %}
+        <div class="section">
+            <h1>Update Information</h1>
+            <a>Streak update</a>
+            <input type="number">
+        </div> 
+    {% endif %}
+
+</div>
+
+{% endblock %}

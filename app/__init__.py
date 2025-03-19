@@ -25,14 +25,21 @@ def create_app():
 
     from . import auth
     app.register_blueprint(auth.bp)
+
+    from . import tracker
+    app.register_blueprint(tracker.bp)
+
+    @app.route('/')
+    def index():
+        return render_template('index.html')
+    
+    # from . import home
+    # app.register_blueprint(home.bp)
+    # app.add_url_rule('/', endpoint='index')
     
     @app.route('/hello')
     def hello():
         return 'Hello, World!'
-    
-    @app.route('/home')
-    def home():
-        return render_template('base.html')
     
     @app.route('/about')
     def about():
