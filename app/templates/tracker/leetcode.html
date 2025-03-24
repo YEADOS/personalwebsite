@@ -9,11 +9,21 @@
         <h3>Current: {{ streak['streak_last_date'] }}</h2>
     </div>
     {% if g.user['admin'] %}
-        <div class="section">
-            <h1>Update Information</h1>
+    <div class="section">
+        <h1>Update Information</h1>
+        <div class="input-group">
             <a>Streak update</a>
             <input type="number">
-        </div> 
+            <a class="btn" href="#">update</a>
+        </div>
+        <div class="input-group">
+            <a>Date update</a>
+            <input type="date">
+            <a class="btn" href="#">update</a>
+        </div>
+            
+            
+    </div> 
     {% endif %}
 
 </div>

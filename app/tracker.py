@@ -34,6 +34,8 @@ def update_steak():
         last_date = streak['streak_last_date']
         today_date = datetime.now().date()
 
+        print(today_date)
+
         print("Before: " + str(current_streak) + " " + str(longest_streak) + " " + str(start_date) + " " + str(last_date))
 
         if (start_date is None):
@@ -41,15 +43,20 @@ def update_steak():
         elif (last_date is None):
             last_date = today_date
 
+        # print(last_date + " " + start_date)
+
         if (last_date < today_date and (today_date - last_date).days ==1):
             current_streak += 1
         elif last_date < today_date and (today_date - last_date).days > 1:
-            current_streak = 1
+            current_streak = 1      
 
         if (current_streak > longest_streak):
             longest_streak = current_streak
 
         last_date = today_date
+
+        # if (last_date-start_date).days + 1 != current_streak:
+        #     start_date = last_date
         
         # print(str(current_streak) + " " + str(longest_streak) + " " + str(start_date) + " " + str(last_date))
 
