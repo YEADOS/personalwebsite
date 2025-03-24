@@ -2,34 +2,37 @@
 <html>
 <head>
     <title>{% block title %}{% endblock %} - Nick Yeadon</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/utils.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/utils.css') }}">
 </head>
 <body>
-    <header>
+    <header class="container">
         <nav class="navbar">
             
-            <a a class="nav-logo" href="{{ url_for('auth.login')}}">Nicholas Yeadon</a>
+            <a class="nav-logo" href="{{ url_for('auth.login')}}">Nicholas Yeadon</a>
             <ul class="nav-links">
                 <!-- <li></li> -->
                 <li><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
-                <li><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
-                <li><a class="nav-link" href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a class="nav-link" href="#about">About</a></li>
+                <li><a class="nav-link" href="#projects">Projects</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
                 <li class="nav-line"></li>
                 {% if g.user %}
                     <li><a class="nav-user">{{ g.user['username'] }}</a></li>
-                    <li><a class="nav-btn nav-link" href="{{ url_for('auth.logout')}}">Logout</a></li>
+                    <li><a class="btn" href="{{ url_for('auth.logout')}}">Logout</a></li>
                 {% else %} 
-                    <li><a class="nav-btn nav-link" href="{{ url_for('auth.login')}}">Login</a></li>
+                    <li><a class="btn" href="{{ url_for('auth.login')}}">Login</a></li>
                 {% endif %}
             </ul>
             
         </nav>
     </header>
 
-    <div class="content">
-        {% block content %}{% endblock %}
-    </div>
+    {% block content %}{% endblock %}    
+
+    <!-- <div class="container">
+        
+    </div> -->
     
 
 </body>
