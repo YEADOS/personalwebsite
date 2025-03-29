@@ -8,17 +8,31 @@
     <h3>Current: {{ streak['streak_last_date'] }}</h2>
 </div> -->
 
-<!-- Chatgpt -->
-<div class="streak-display section">
+<section class="section container">
     <h2 class="streak-display__title">LeetCode Streak</h2>
-    <ul class="streak-display__info">
-      <li><strong>Streak:</strong>{{ streak['current_streak'] }}</li>
-      <li><strong>Longest Streak:</strong>{{ streak['longest_streak'] }}</li>
-      <li><strong>Started:</strong>{{ streak['streak_start_date'] }}</li>
-      <li><strong>Current:</strong>{{ streak['streak_last_date'] }}</li>
+    <ul class="streak-info-boxes">
+        <li class="info-box info-box-large">
+            <h3 class="info-box-title">Start</h3>
+            <p class="info-box-value">{{ streak['streak_start_date'] }}</p>
+        </li>
+        <li class="info-box">
+            <h3 class="info-box-title">Streak</h3>
+            <p class="info-box-value">{{ streak['current_streak'] }}</p>
+        </li>
+        <li class="info-box">
+            <h3 class="info-box-title">Longest</h3>
+            <p class="info-box-value">{{ streak['longest_streak'] }}</p>
+        </li>
+
+        <li class="info-box info-box-large">
+            <h3 class="info-box-title">Current</h3>
+            <p class="info-box-value">{{ streak['streak_last_date'] }}</p>
+        </li>
+
     </ul>
-  </div>
-  
+</section>
+
+
 {% if g.user['admin'] %}
 <div class="streak-settings container section">
     <section class="streak-settings-header">
@@ -30,21 +44,22 @@
         <input name="lng_streak" type="number" placeholder="Longest Streak"/>
         <input name="start_date" type="date"/>
         <button class="btn" type="submit">Update</button>
-    </form>
-    <!-- <div class="input-group">
-        <a>Streak update</a>
-        <input type="number">
-        <a class="btn" href="#">update</a>
-    </div> -->
-    <!-- <div class="input-group">
-        <a>Date update</a>
-        <input type="date">
-        <a class="btn" href="#">update</a>
-    </div> -->
-            
-            
+    </form>                  
 </div> 
 {% endif %}
+
+<!-- Chatgpt -->
+<!-- <div class="streak-display container section">
+    <h2 class="streak-display__title">LeetCode Streak</h2>
+    <ul class="streak-display__info">
+      <li><strong>Streak:</strong>{{ streak['current_streak'] }}</li>
+      <li><strong>Longest Streak:</strong>{{ streak['longest_streak'] }}</li>
+      <li><strong>Started:</strong>{{ streak['streak_start_date'] }}</li>
+      <li><strong>Current:</strong>{{ streak['streak_last_date'] }}</li>
+    </ul>
+  </div> -->
+  
+
 
 
 {% endblock %}

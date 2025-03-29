@@ -69,7 +69,7 @@ strong {
 input {
     display: inline-block;
     padding: 0;
-    border: none;
+    border: 1px solid var(--clr-light);
     background: none;
     color: inherit;
 }

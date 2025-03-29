@@ -1,15 +1,58 @@
 /* Leetcode Tracker Sytles */
 
+.streak-info-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    list-style: none;
+    margin: 1rem auto;
+    padding: 0;
+}
+
+.info-box {
+    width: 20rem;
+    height: 10rem;
+    border: 1px solid var(--clr-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: var(--clr-darkblue); */
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.info-box-title {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.25rem;
+    color: var(--clr-amber);
+}
+
+.info-box-value {
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+
+
 /* Main Streak Display */
 .streak-display {
-    background-color: var(--clr-gray800);
+    /* background-color: var(--clr-gray800); */
     color: var(--clr-light);
     padding: 2rem;
+    /* border: 2px solid var(--clr-light); */
     border-radius: 12px;
     /* font-family: 'Inter', sans-serif; */
     max-width: 420px;
     margin: 2rem auto;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+    /* box-shadow: 0 0 14px rgba(255, 255, 255, 0.8); */
 }
   
 .streak-display__title {
@@ -24,8 +67,9 @@
 }
 
 .streak-display__info {
+    /* border: 2px solid var(--clr-light); */
     list-style: none;
-    padding: 0;
+    padding: 1rem;
 }
   
 .streak-display__info li {
@@ -34,6 +78,7 @@
     padding: 0.5rem 0;
     font-size: 1.1rem;
     border-bottom: 1px solid var(--clr-light);
+
 }
   
 .streak-display__info li strong {
@@ -45,6 +90,7 @@
 /* Streak Settings Section (admin only) */
 .streak-settings {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
@@ -75,5 +121,50 @@
     padding: 0.5em 1em;
     font-size: 1rem;
   }
+
+
+@media (min-width: 475px) {
+
+}
+/* s */
+@media (min-width: 640px) {
+
+}
+/* m */
+@media (min-width: 768px) {
+    .streak-info-boxes {
+        gap: 3rem;
+        flex-direction: row;
+        margin: 4rem auto;
+    }
+
+    .info-box {
+        width: 16rem;
+    }
+    
+    .info-box-value {
+        text-align: center;
+        font-size: 2.25rem;
+        font-weight: 600;
+        margin-top: 1rem;
+    }
+
+    .streak-settings {
+        flex-direction: row;
+    }
+
+}
+/* l */
+@media (min-width: 1024px) {
+
+}
+/* xl */
+@media (min-width: 1280px) {
+
+}
+/* 2xl */
+@media (min-width: 1536px) {
+
+}
 
 

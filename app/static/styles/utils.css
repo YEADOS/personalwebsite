@@ -51,6 +51,7 @@
 
 input.btn {
     padding: 1em 1em;
+    border: none;
 }
 
 .form-link {
