@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
+
 .btn {
     display: inline-block;
     font-weight: 600;
@@ -24,6 +25,39 @@
     rgba(7, 89, 133, 0.22), 0 0 120 -10px var(--clr-skyblue); */
 
 }
+
+.form-auth {
+    margin: auto;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-heading {
+    text-align: center;
+}
+
+.form-label {
+    font-weight: 600;
+    gap: 0.5rem;
+}
+
+.form-input {
+    padding: 1em 1em;
+    border: 1px solid var(--clr-light);
+}
+
+input.btn {
+    padding: 1em 1em;
+}
+
+.form-link {
+    color: var(--clr-amber);
+}
+
+
 
 .container {
     width: 100%;

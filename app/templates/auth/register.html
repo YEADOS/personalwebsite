@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <form class="form-login" method="post">
-        <label for="username">Username</label>
-        <input name="username" id="username" required>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required>
-        <input class="form-btn btn" type="submit" value="Register">
+<section class="container section">
+    <form class="form-auth" method="post">
+        <h2 class="form-heading">Register</h1>
+        <label class="form-label" for="username">Username</label>
+        <input class="form-input" name="username" id="username" required>
+        <label class="form-label" for="password">Password</label>
+        <input class="form-input" type="password" name="password" id="password" required>
+        <input class="btn" type="submit" value="Register">
         
-        <a class="form-link" href="{{ url_for('auth.login') }}">Login</a>
+        <a class="form-link" href="{{ url_for('auth.login') }}">Already have an account? Login here.</a>
     </form>
+</section>
 
     
 
