@@ -1,25 +1,46 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container section">
+<!-- <div class="streak-display container section">
     <h1>Streak : {{ streak['current_streak'] }}</h1>
     <h2>Longest Streak: {{ streak['longest_streak'] }}</h2>
     <h3>Started: {{ streak['streak_start_date'] }}</h2>
     <h3>Current: {{ streak['streak_last_date'] }}</h2>
-</div>
+</div> -->
+
+<!-- Chatgpt -->
+<div class="streak-display section">
+    <h2 class="streak-display__title">LeetCode Streak</h2>
+    <ul class="streak-display__info">
+      <li><strong>Streak:</strong>{{ streak['current_streak'] }}</li>
+      <li><strong>Longest Streak:</strong>{{ streak['longest_streak'] }}</li>
+      <li><strong>Started:</strong>{{ streak['streak_start_date'] }}</li>
+      <li><strong>Current:</strong>{{ streak['streak_last_date'] }}</li>
+    </ul>
+  </div>
+  
 {% if g.user['admin'] %}
-<div class="container section">
-    <h1>Update Information</h1>
-    <div class="input-group">
+<div class="streak-settings container section">
+    <section class="streak-settings-header">
+        <h2 class="streak-settings-heading">Update Information</h2>
+        <p>Leetcode streak settings - Update streak display. Admin can update current streak, longest streak and start date</p>
+    </section>
+    <form class="streak-form">
+        <input type="number" placeholder="Current Streak"/>
+        <input type="number" placeholder="Longest Streak"/>
+        <input type="date"/>
+        <button class="btn" type="submit">Update</button>
+    </form>
+    <!-- <div class="input-group">
         <a>Streak update</a>
         <input type="number">
         <a class="btn" href="#">update</a>
-    </div>
-    <div class="input-group">
+    </div> -->
+    <!-- <div class="input-group">
         <a>Date update</a>
         <input type="date">
         <a class="btn" href="#">update</a>
-    </div>
+    </div> -->
             
             
 </div> 

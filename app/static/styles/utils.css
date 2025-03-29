@@ -5,6 +5,7 @@
     font-weight: 600;
     text-decoration: none;
     background-color: var(--clr-skyblue);
+    /* background-color: var(--clr-amber); */
     color: var(--clr-light);
     padding: 0.5em 1em;
     border-radius: 6px;
@@ -34,7 +35,7 @@
 }
 
 .section {
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
 /* xs */
