@@ -25,10 +25,10 @@
         <h2 class="streak-settings-heading">Update Information</h2>
         <p>Leetcode streak settings - Update streak display. Admin can update current streak, longest streak and start date</p>
     </section>
-    <form class="streak-form">
-        <input type="number" placeholder="Current Streak"/>
-        <input type="number" placeholder="Longest Streak"/>
-        <input type="date"/>
+    <form class="streak-form" action="/tracker/update_streak_admin" method="post">
+        <input name="cur_streak" type="number" placeholder="Current Streak"/>
+        <input name="lng_streak" type="number" placeholder="Longest Streak"/>
+        <input name="start_date" type="date"/>
         <button class="btn" type="submit">Update</button>
     </form>
     <!-- <div class="input-group">

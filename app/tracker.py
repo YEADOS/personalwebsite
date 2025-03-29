@@ -15,6 +15,48 @@ def view():
 
     return render_template('tracker/leetcode.html', streak=streak)
 
+# Admin can manually update and change the values of the streak
+@bp.route('/update_streak_admin', methods=['POST'])
+def update_info():
+
+    if request.method == 'POST':
+        current_streak = request.form['cur_streak']
+        longest_streak = request.form['lng_streak']
+        start_date = request.form['start_date']
+        
+        db = get_db()
+        error = None
+
+        if not current_streak:
+            error = 'Missing current streak.'
+        elif not longest_streak:
+            error = 'Missing longest streak.'
+        elif not start_date:
+            error = 'Missing start date.'
+
+        if error is None: 
+            try:
+                db.execute(
+                    """UPDATE streak
+                    SET current_streak = ?, 
+                        longest_streak = ?, 
+                        streak_start_date = ?
+                    WHERE id = ?""",
+                    (current_streak, longest_streak, start_date, 1),
+                )
+                db.commit()
+                               
+            except db.IntegrityError:
+                error = "Steak failed to update in database"
+
+            return redirect(url_for('tracker.view'))
+
+        
+        flash(error)
+
+    return redirect(url_for('tracker.view'))
+    
+# Chrome extension sends post request to this function which updates the streaks data in database and display
 @bp.route('/update_streak', methods=['POST'])
 def update_steak():
 
