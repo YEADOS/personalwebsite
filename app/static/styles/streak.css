@@ -29,13 +29,13 @@
     margin-bottom: 1rem;
     text-align: center;
     font-weight: 300;
-    font-size: 1.25rem;
+    font-size: var(--size-xl);
     color: var(--clr-amber);
 }
 
 .info-box-value {
     text-align: center;
-    font-size: 2.25rem;
+    font-size: var(--size-4xl);
     font-weight: 600;
     margin-top: 0.5rem;
 }
@@ -61,7 +61,7 @@
     text-decoration-thickness: 4px;
     text-underline-offset: 0.5rem;
     text-decoration-color: var(--clr-amber);
-    font-size: 1.75rem;
+    font-size: var(--size-3xl);
     text-align: center;
     margin-bottom: 1.5rem;
 }
@@ -76,7 +76,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 0;
-    font-size: 1.1rem;
+    font-size: var(--size-xl);
     border-bottom: 1px solid var(--clr-light);
 
 }
@@ -119,7 +119,7 @@
     /* padding-top: 0.25rem;
     padding-bottom: 0.25rem; */
     padding: 0.5em 1em;
-    font-size: 1rem;
+    font-size: var(--size-base);
   }
 
 
@@ -144,7 +144,7 @@
     
     .info-box-value {
         text-align: center;
-        font-size: 2.25rem;
+        font-size: var(--size-4xl);
         font-weight: 600;
         margin-top: 1rem;
     }

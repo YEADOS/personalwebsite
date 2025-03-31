@@ -64,8 +64,8 @@ input.btn {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
     /* border: 1px solid red; */
 }
 
@@ -89,6 +89,7 @@ input.btn {
 @media (min-width: 768px) {
     .container {
         max-width: 768px;
+        padding-left: 0.5rem;
     }
 }
 /* l */
