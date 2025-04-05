@@ -1,0 +1,152 @@
+.about {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    /* margin-bottom: 1rem; */
+    border: 1px solid var(--clr-light);
+    padding: 2rem;
+}
+
+
+.about-title {
+    color: var(--clr-light);
+    font-size: var(--size-xl);
+
+}
+
+.about-info {
+    max-width: 60ch;
+    color: var(--clr-light);
+    font-size: var(--size-base);
+
+}
+
+.about-line {
+    border-color: var(--clr-gray800);
+}
+
+
+
+.about-subtitle {
+    color: var(--clr-gray400);
+    font-size: var(--size-xl);
+    text-align: center;
+}
+
+.skills-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    font-size: var(--size-lg);
+    list-style: none;
+    padding: 0;
+    
+
+}
+
+.about-skill {
+    list-style: none;
+    width: var(--size-5xl);
+    height: var(--size-5xl);
+    /* background-color: white; */
+}
+
+.about-sidesection {
+    display: none;
+}
+
+
+/* xs */
+@media (min-width: 475px) {
+    .about-info {
+        max-width: 100ch;
+    }
+}
+/* s */
+@media (min-width: 640px) {
+
+}
+/* m */
+@media (min-width: 768px) {
+
+
+    .about-info {
+        font-size: var(--size-lg);
+    
+    }
+
+    .about-title {
+        font-size: var(--size-2xl);
+    }
+
+    .about-subtitle {
+        font-size: var(--size-xl);
+    }
+
+
+
+    .about-skill {
+        width: var(--size-6xl);
+        height: var(--size-6xl);
+
+    }
+
+    .skills-list {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+}
+/* l */
+@media (min-width: 1024px) {
+
+    .about {
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .about-sidesection {
+        display: block;
+    }
+
+    .skills-list {
+        font-size: var(--size-xl);
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    .about-skill {
+        width: var(--size-7xl);
+        height: var(--size-7xl);
+
+    }
+
+}
+/* xl */
+@media (min-width: 1280px) {
+
+}
+/* 2xl */
+@media (min-width: 1536px) {
+
+    .about-info {
+        font-size: var(--size-xl);
+    
+    }
+    .about-title {
+        font-size: var(--size-3xl);
+    }
+
+    .about-subtitle {
+        font-size: var(--size-2xl);
+    }
+
+}

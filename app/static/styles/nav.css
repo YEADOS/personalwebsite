@@ -62,7 +62,7 @@
 
     .nav-logo {
         display: block;
-        color: white;
+        color: var(--clr-light);
         text-decoration: none;
         font-size: var(--size-xl);
     }
@@ -79,7 +79,7 @@
     
     .nav-line {
         padding-top: 1.5em;
-        border: 1px solid white;
+        border: 1px solid var(--clr-light);
     }
 
     .nav-user {

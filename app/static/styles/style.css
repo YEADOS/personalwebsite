@@ -53,6 +53,14 @@ html {
     scroll-behavior: smooth;
 }
 
+.light-mode {
+    --clr-light: #030712;
+    --clr-dark: #d8d9dce0;
+    --clr-gray400: #1f2937;
+    --clr-gray600: #1f2937;
+    --clr-gray800: #1f2937;
+}
+
 body {
     font-family: "JetBrains+Mono", sans-serif;
     background-color: var(--clr-dark);
