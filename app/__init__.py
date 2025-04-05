@@ -8,7 +8,7 @@ def create_app():
 
     # config app using dictionary (key, value pairs)
     app.config.from_mapping(
-        # SECRET_KEY = 'dev',
+        SECRET_KEY = 'dev',
         DATABASE = os.path.join(app.instance_path, 'website.sqlite')
     )
 
@@ -25,6 +25,7 @@ def create_app():
 
     from . import auth
     app.register_blueprint(auth.bp)
+    auth.init_login_manager(app)
 
     from . import tracker
     app.register_blueprint(tracker.bp)

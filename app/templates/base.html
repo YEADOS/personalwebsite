@@ -21,8 +21,8 @@
                 <li><a class="nav-link" href="#projects">Projects</a></li>
                 <li><a class="nav-link" href="#contact">Contact</a></li>
                 <li class="nav-line"></li>
-                {% if g.user %}
-                    <li><a class="nav-user">{{ g.user['username'] }}</a></li>
+                {% if current_user.is_authenticated %}
+                    <li><a class="nav-user">{{ current_user['username'] }}</a></li>
                     <li><a class="btn" href="{{ url_for('auth.logout')}}">Logout</a></li>
                 {% else %} 
                     <li><a class="btn" href="{{ url_for('auth.login')}}">Login</a></li>
