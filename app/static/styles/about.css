@@ -1,28 +1,43 @@
 .about {
     display: flex;
     flex-direction: column;
-
-    gap: 1rem;
+    /* justify-content: space-evenly; */
+    /* gap: 1rem; */
 }
 
 .about-section {
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
+    margin-bottom: 1rem;
+    
+    /* text-align: center; */
+    /* border: 1px solid var(--clr-light); */
+    /* padding: 1.5rem; */
+}
+
+.about-sidesection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    /* margin-top: 2rem; */
     /* margin-bottom: 1rem; */
-    border: 1px solid var(--clr-light);
-    padding: 2rem;
+    border: 2px solid var(--clr-light);
+    padding: 1.5rem;
 }
 
 
 .about-title {
     color: var(--clr-light);
     font-size: var(--size-xl);
+    margin: auto;
 
 }
 
 .about-info {
     max-width: 60ch;
+    margin: auto;
+    /* text-align: center; */
     color: var(--clr-light);
     font-size: var(--size-base);
 
@@ -44,7 +59,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    gap: 1rem;
+    /* gap: 1rem; */
     font-size: var(--size-lg);
     list-style: none;
     padding: 0;
@@ -56,71 +71,138 @@
     list-style: none;
     width: var(--size-5xl);
     height: var(--size-5xl);
+    transition: transform 0.4s;
+    /* border: 1px solid white; */
     /* background-color: white; */
 }
 
-.about-sidesection {
-    display: none;
+.about-skill:hover {
+    transform: translateY(-4px);
+    cursor: pointer;
+    /* width: var(--size-6xl);
+    height: var(--size-6xl); */
+
 }
+
+.hobby-list {
+    display: flex;
+
+    flex-wrap: wrap;
+    /* gap: 1rem; */
+    /* max-width: 300px; */
+    /* list-style: armenian; */
+    list-style-type: none;
+    /* padding: 0; */
+
+    /* margin: 0 auto; */
+
+    /* justify-content: space-around; */
+}
+
+.hobby-item {
+    /* width: 50%;  */
+    text-align: center;
+    box-sizing: border-box;
+    /* background-color: red; */
+    padding: 0.5rem;
+    text-decoration: underline;
+    /* padding: 4px;  */
+    /* margin: 0; */
+}
+
+
+
 
 
 /* xs */
 @media (min-width: 475px) {
-    .about-info {
-        max-width: 100ch;
-    }
+    /* .about-info {
+        max-width: 100%;
+    } */
 }
 /* s */
 @media (min-width: 640px) {
+
 
 }
 /* m */
 @media (min-width: 768px) {
 
+    .about {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+        /* align-items: center; */
+        
+    }
+
 
     .about-info {
         font-size: var(--size-lg);
+        margin: 0;
     
     }
 
     .about-title {
         font-size: var(--size-2xl);
+        margin: 0;
     }
 
     .about-subtitle {
         font-size: var(--size-xl);
     }
 
-
-
     .about-skill {
-        width: var(--size-6xl);
-        height: var(--size-6xl);
+        width: var(--size-5xl);
+        height: var(--size-5xl);
 
     }
 
+
+
     .skills-list {
-        justify-content: center;
-        gap: 2rem;
+        /* justify-content: center; */
+        gap: 1rem;
     }
 
 }
 /* l */
 @media (min-width: 1024px) {
 
-    .about {
-        justify-content: space-evenly;
-        align-items: center;
+    .skills-list {
+        font-size: var(--size-xl);
+        /* justify-content: center; */
+        gap: 1.75rem;
     }
 
-    .about-sidesection {
-        display: block;
+    .about-skill {
+        width: var(--size-5xl);
+        height: var(--size-5xl);
+
     }
+
+
+
+}
+/* xl */
+@media (min-width: 1280px) {
 
     .skills-list {
         font-size: var(--size-xl);
-        justify-content: center;
-        gap: 5rem;
+        /* justify-content: center; */
+        gap: 2.5rem;
+    }
+
+    .about-info {
+        font-size: var(--size-xl);
+    
+    }
+    .about-title {
+        font-size: var(--size-5xl);
+    }
+
+    .about-subtitle {
+        font-size: var(--size-2xl);
     }
 
     .about-skill {
@@ -129,24 +211,18 @@
 
     }
 
-}
-/* xl */
-@media (min-width: 1280px) {
 
 }
 /* 2xl */
 @media (min-width: 1536px) {
 
     .about-info {
-        font-size: var(--size-xl);
-    
-    }
-    .about-title {
-        font-size: var(--size-3xl);
+        max-width: 70ch;
     }
 
-    .about-subtitle {
-        font-size: var(--size-2xl);
+    .skills-list {
+        /* justify-content: center; */
+        gap: 4rem;
     }
 
 }

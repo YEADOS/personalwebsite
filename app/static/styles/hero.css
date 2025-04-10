@@ -109,10 +109,6 @@
 /* xl */
 @media (min-width: 1280px) {
 
-}
-/* 2xl */
-@media (min-width: 1536px) {
-
     .hero {
         gap: 1rem;
     }
@@ -123,11 +119,11 @@
     }
     
     .hero-title {
-        font-size: var(--size-4xl);
+        font-size: var(--size-5xl);
     }
     
     .hero-subtitle {
-        font-size: var(--size-6xl);
+        font-size: var(--size-7xl);
     }
     
     .hero-description {
@@ -137,5 +133,9 @@
     .hero-btn {
         font-size: var(--size-xl);
     }
+
+}
+/* 2xl */
+@media (min-width: 1536px) {
 
 }
