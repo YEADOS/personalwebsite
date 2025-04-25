@@ -70,7 +70,7 @@ input.btn {
 }
 
 .section {
-    margin-top: 8rem;
+    margin-top: 6rem;
 }
 
 /* xs */
@@ -78,12 +78,16 @@ input.btn {
     .container {
         max-width: 475px;
     }
+
+    
 }
 /* s */
 @media (min-width: 640px) {
     .container {
         max-width: 640px;
     }
+
+    
 }
 /* m */
 @media (min-width: 768px) {
@@ -91,11 +95,17 @@ input.btn {
         max-width: 768px;
         padding-left: 0.5rem;
     }
+
+
 }
 /* l */
 @media (min-width: 1024px) {
     .container {
         max-width: 1024px;
+    }
+
+    .section {
+        margin-top: 10rem;
     }
 }
 /* xl */

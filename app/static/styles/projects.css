@@ -16,6 +16,44 @@
     text-align: center;
 }
 
+.project-title {
+    font-size: var(--size-base);
+    margin-bottom: 1rem;
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.project-subtitle {
+    display: none;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+}
+
+.project-content {
+    margin-bottom: 5rem;
+}
+
+.projects-description1 {
+    font-size: var(--size-sm);
+    color: var(--clr-gray600);
+    margin: 1rem 0;
+}
+
+.projects-description2 {
+    font-size: var(--size-sm);
+    color: var(--clr-gray400);
+    margin-bottom: 1rem;
+}
+
+.project-btn {
+    font-size: var(--size-sm);
+}
+
+
+
 
 
 /* xs */
@@ -23,42 +61,186 @@
     /* .projects-description {
         max-width: 100ch;
     } */
+    .projects-description1 {
+        font-size: var(--size-base);
+        margin: 1.5rem 0;
+    }
+    
+    .projects-description2 {
+        font-size: var(--size-base);
+        margin-bottom: 1.5rem;
+    }
+
+    .project-btn {
+        font-size: var(--size-base);
+    }
+
 }
 /* s */
 @media (min-width: 640px) {
+
+    .project-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        'img1 content1'
+        'content2 img2'
+        'img3 content3'
+        'content4 img4';
+        place-items: center;
+        text-align: center;
+    }
+
+
+    /* Grid Layout */
+    .project-img1 {
+        grid-area: img1;
+    }
+    .project-img2 {
+        grid-area: img2;
+    }
+    .project-img3 {
+        grid-area: img3;
+    }
+    .project-img4 {
+        grid-area: img4;
+    }
+
+    .project-content1 {
+        grid-area: content1;
+    }
+    .project-content2 {
+        grid-area: content2;
+    }
+    .project-content3 {
+        grid-area: content3;
+    }
+    .project-content4 {
+        grid-area: content4;
+    }
+
+    .project-content {
+        padding: 0 1rem;
+        margin-bottom: 0;
+    }
+
+    .project-title {
+        display: none;
+    }
+
+    .project-subtitle {
+        display: block;
+        /* text-align: center; */
+        font-size: var(--size-base);
+    }
+
+    .projects-description1 {
+        font-size: var(--size-xs);
+        margin: 1em 0;
+    }
+    
+    .projects-description2 {
+        font-size: var(--size-xs);
+        margin-bottom: 1em;
+    }
+    
+    .project-btn {
+        font-size: var(--size-sm);
+    }
+
 
 }
 /* m */
 @media (min-width: 768px) {
 
 
+    .projects-title {
+        font-size: var(--size-2xl);
+    }
+
     .projects-description {
         font-size: var(--size-lg);
     
     }
 
-    .projects-title {
-        font-size: var(--size-2xl);
+    .project-subtitle {
+        font-size: var(--size-lg);
     }
+
+    .projects-description1 {
+        font-size: var(--size-sm);
+    }
+    
+    .projects-description2 {
+        font-size: var(--size-sm);
+    }
+    
+    .project-btn {
+        font-size: var(--size-sm);
+    }
+
 
 }
 /* l */
 @media (min-width: 1024px) {
 
+    .project-subtitle {
+        font-size: var(--size-xl);
+    }
+
+    .projects-description1 {
+        font-size: var(--size-base);
+    }
+    
+    .projects-description2 {
+        font-size: var(--size-base);
+    }
+    
+    .project-btn {
+        font-size: var(--size-base);
+    }
+
 }
 /* xl */
 @media (min-width: 1280px) {
+
+    .projects-title {
+        font-size: var(--size-5xl);
+    }
+    .projects-description {
+        font-size: var(--size-xl);
+        margin: 2rem auto;
+    }
+
+    .project-subtitle {
+        font-size: var(--size-2xl);
+    }
+
+    .projects-description1 {
+        font-size: var(--size-lg);
+    }
+    
+    .projects-description2 {
+        font-size: var(--size-lg);
+    }
+    
+    .project-btn {
+        font-size: var(--size-lg);
+    }
+
+    .project-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
 
 }
 /* 2xl */
 @media (min-width: 1536px) {
 
-    .projects-description {
-        font-size: var(--size-xl);
+    .project-container {
+        width: 70%;
+    }
     
-    }
-    .projects-title {
-        font-size: var(--size-5xl);
-    }
 
 }
