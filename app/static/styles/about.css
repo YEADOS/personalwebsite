@@ -46,7 +46,7 @@
     max-width: 60ch;
     margin: auto;
     /* text-align: center; */
-    color: var(--clr-light);
+    color: var(--clr-gray400);
     font-size: var(--size-base);
 
 }

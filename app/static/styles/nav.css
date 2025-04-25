@@ -8,6 +8,8 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     margin: auto;
+    z-index: 9999;
+    position: relative;
     /* background-color: var(--secondary-color); */
 }
 
