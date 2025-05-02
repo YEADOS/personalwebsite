@@ -11,7 +11,8 @@
 .projects-description {
     max-width: 60ch;
     margin: 1rem auto;
-    color: var(--clr-gray600);
+    line-height: 1.2;
+    color: var(--clr-gray400);
     font-size: var(--size-base);
     text-align: center;
 }
@@ -38,12 +39,15 @@
 
 .projects-description1 {
     font-size: var(--size-sm);
+
+    line-height: 1.2;
     color: var(--clr-gray600);
     margin: 1rem 0;
 }
 
 .projects-description2 {
     font-size: var(--size-sm);
+    line-height: 1.6;
     color: var(--clr-gray400);
     margin-bottom: 1rem;
 }
@@ -85,8 +89,7 @@
         grid-template-areas: 
         'img1 content1'
         'content2 img2'
-        'img3 content3'
-        'content4 img4';
+        'img3 content3';
         place-items: center;
         text-align: center;
     }
