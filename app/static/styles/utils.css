@@ -73,6 +73,19 @@ input.btn {
     margin-top: 6rem;
 }
 
+.form-warning {
+
+    background-color: #fff3cd;
+    padding: 1rem;
+    margin: 0 auto;
+
+    width: 50%;
+    text-align: center;
+    font-weight: 400;
+    color: red;
+    margin-bottom: 2rem;
+}
+
 /* xs */
 @media (min-width: 475px) {
     .container {
